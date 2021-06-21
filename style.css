@@ -18,6 +18,7 @@
 .card {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 100px;
 }
 
@@ -37,7 +38,6 @@
 .col-3 {
   padding: 40px;
   max-width: 30%;
-
   background-color: var(--third-col-color);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -72,6 +72,23 @@
   border-radius: 50px;
   border: none;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.col-1 .btn:hover {
+  background: var(--first-col-color);
+  color: var(--bg-heading-button-color);
+  border: var(--bg-heading-button-color) 1px solid;
+}
+.col-2 .btn:hover {
+  background: var(--second-col-color);
+  color: var(--bg-heading-button-color);
+  border: var(--bg-heading-button-color) 1px solid;
+}
+.col-3 .btn:hover {
+  background: var(--third-col-color);
+  color: var(--bg-heading-button-color);
+  border: var(--bg-heading-button-color) 1px solid;
 }
 
 .col-2 .btn {
@@ -79,6 +96,7 @@
 }
 .col-3 .btn {
   color: var(--third-col-color);
+  margin-top: 20px;
 }
 
 img {
@@ -90,21 +108,25 @@ img {
 .attribution {
   font-size: 15px;
   text-align: center;
+  margin: 15px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  font-family: var(--secondary-font);
 }
 
 @media (max-width: 768px) {
   .card {
     display: flex;
     flex-direction: column;
+    margin: 10px;
   }
 
   .col-1,
   .col-2,
   .col-3 {
     max-width: 100%;
+    padding: 20px;
   }
 
   .col-1 {
@@ -114,5 +136,9 @@ img {
   .col-3 {
     border-top-right-radius: 0px;
     border-bottom-left-radius: 10px;
+  }
+
+  .col-3 .btn {
+    margin-top: 0px;
   }
 }
